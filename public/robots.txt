@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://farm2spoon.com/sitemap.xml

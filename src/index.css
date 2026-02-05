@@ -1,24 +1,20 @@
 :root {
-    --primary-green: #2d5a27;
-    /* Lush Indian Khet */
+    --primary-green: #1a4314;
+    --accent-green: #2d5a27;
     --terracotta: #8e443d;
-    /* Sacred Soil */
     --turmeric: #e9b824;
-    /* Prosperity Glow */
     --ivory: #fdfbf0;
-    /* Pure Shuddh Ivory */
-    --text-dark: #3e2723;
-    /* Deep Brown Earth */
-    --text-accent: #6d4c41;
-    --sand: #e5ded1;
+    --text-dark: #1b1411;
+    --text-muted: #5d4037;
     --white: #ffffff;
+    --sand: #e5ded1;
 
-    --font-serif: 'Playfair Display', serif;
-    --font-sans: 'Outfit', sans-serif;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-accent: 'Montserrat', sans-serif;
 
-    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     --intro-bg: #1b1411;
-    /* Deep Indian Soil */
 }
 
 * {
@@ -28,7 +24,7 @@
 }
 
 body {
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     background-color: var(--ivory);
     color: var(--text-dark);
     line-height: 1.6;
@@ -40,9 +36,9 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-weight: 500;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
 }
 
 a {
@@ -165,19 +161,23 @@ html {
 }
 
 .product-card {
-    padding: 4rem 2.5rem;
-    border-radius: 30px;
+    padding: 3.5rem 2.5rem;
+    border-radius: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: var(--transition-smooth);
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    min-height: 450px;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.4);
+    min-height: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.07);
+    border-color: var(--primary-green);
 }
 
 .product-name {
@@ -287,47 +287,53 @@ section {
 }
 
 .brand-name {
-    font-size: clamp(3rem, 10vw, 8rem);
+    font-size: clamp(4rem, 12vw, 10rem);
     color: var(--primary-green);
     text-transform: lowercase;
     margin-bottom: 2rem;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.04em;
+    font-weight: 700;
 }
 
 .tagline {
-    font-size: 1.2rem;
+    font-family: var(--font-accent);
+    font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.5em;
-    color: var(--text-accent);
+    letter-spacing: 0.6em;
+    color: var(--terracotta);
     margin-bottom: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .subtext {
     font-size: 1.1rem;
-    max-width: 450px;
-    margin: 0 auto 3rem;
-    color: var(--text-accent);
-    font-weight: 300;
+    max-width: 500px;
+    margin: 0 auto 3.5rem;
+    color: var(--text-muted);
+    font-weight: 400;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 1.2rem 3rem;
+    padding: 1.4rem 4rem;
     background-color: var(--primary-green);
     color: var(--white);
     border-radius: 100px;
     font-size: 0.9rem;
-    letter-spacing: 0.1em;
+    font-family: var(--font-accent);
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    transition: var(--transition-smooth);
+    transition: var(--transition);
     border: 1px solid var(--primary-green);
+    box-shadow: 0 10px 20px rgba(26, 67, 20, 0.2);
 }
 
 .cta-button:hover {
-    background-color: transparent;
-    color: var(--primary-green);
-    transform: translateY(-2px);
+    background-color: var(--terracotta);
+    border-color: var(--terracotta);
+    color: var(--white);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(142, 68, 61, 0.3);
 }
 
 /* About Section */
@@ -574,15 +580,17 @@ section {
 /* Psychological Triggers & Hype */
 .exclusive-badge {
     display: inline-block;
-    padding: 0.5rem 1.2rem;
+    padding: 0.6rem 1.8rem;
     background: var(--terracotta);
     color: var(--white);
     border-radius: 50px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    font-family: var(--font-accent);
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 2rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 5px 15px rgba(142, 68, 61, 0.2);
 }
 
 .cta-button.primary {
