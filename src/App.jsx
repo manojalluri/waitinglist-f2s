@@ -152,7 +152,7 @@ function App() {
             id: 'abc', name: 'ABC Mix Powder', subtitle: 'Apple • Beetroot • Carrot',
             tag: 'Batch #01: Limited Harvest',
             benefits: ['Supports natural detoxification', 'Improves digestion & gut health', 'Boosts immunity and energy', 'Rich in antioxidants & fiber', 'Supports skin health'],
-            color: '#F9F1E6', // Elegant Ivory/Peach
+            color: '#F4E7D3',
             exclusivity: 'Only 500 units available in Batch 01',
             usage: [
                 { title: 'Vedic Morning Cleanse', desc: 'Mix 5g (1 spoon) into warm water with a dash of lemon on an empty stomach to ignite your digestive agni.' },
@@ -164,7 +164,7 @@ function App() {
             id: 'carrot', name: 'Carrot Powder', subtitle: 'Pure Vitality',
             tag: 'Member Favorite',
             benefits: ['Rich in beta-carotene & Vitamin A', 'Supports eye health', 'Promotes glowing skin', 'Strengthens immunity', 'Natural source of antioxidants'],
-            color: '#FEF6ED', // Soft Sunset
+            color: '#FDF2E9',
             exclusivity: 'Exclusive early access for waitlist',
             usage: [
                 { title: 'Skin Glow Elixir', desc: 'Add to your daily green smoothie. The high beta-carotene content works from within for radiant skin.' },
@@ -176,7 +176,7 @@ function App() {
             id: 'beetroot', name: 'Beetroot Powder', subtitle: 'Heart & Strength',
             tag: 'Peak Purity',
             benefits: ['Improves blood circulation', 'Supports heart health', 'Enhances stamina & endurance', 'Natural nitric oxide booster', 'Supports detoxification'],
-            color: '#FFF2F2', // Pale Blush
+            color: '#F9EBEB',
             exclusivity: 'Farm-fresh collection',
             usage: [
                 { title: 'Pre-Workout Shot', desc: 'Mix with water 30 mins before exercise. Natural nitrates boost nitric oxide levels for better endurance.' },
@@ -188,7 +188,7 @@ function App() {
             id: 'moringa', name: 'Moringa Powder', subtitle: 'Green Superfood',
             tag: 'Nutrient Dense',
             benefits: ['High in plant-based protein', 'Rich in iron, calcium & antioxidants', 'Supports energy and metabolism', 'Helps regulate blood sugar levels', 'Strengthens immunity'],
-            color: '#F2F8F2', // Soft Sage
+            color: '#EEF5ED',
             exclusivity: 'Limited harvest reserve',
             usage: [
                 { title: 'Universal Green Tea', desc: 'Whisk into hot (not boiling) water for a powerful green tea alternative with 10x the nutrients.' },
@@ -200,7 +200,7 @@ function App() {
             id: 'banana', name: 'Banana Powder', subtitle: 'Pure Energy',
             tag: 'Nutrient Powerhouse',
             benefits: ['Natural source of Potassium', 'Supports muscle recovery', 'Good for heart health', 'Easy for digestion', 'Rich in natural electrolytes'],
-            color: '#FFFDF0', // Pearl Yellow
+            color: '#FFFBE6',
             exclusivity: 'Sustainably harvested selection',
             usage: [
                 { title: 'Vedic Energy Drink', desc: 'Whisk into milk or plant-based yogurt. Potassium keeps you energized and supports natural muscle function.' },
@@ -233,11 +233,11 @@ function App() {
                 <div className="hero-bg-anim"></div>
                 <FloatingParticles />
                 <div className="hero-content container">
-                    <div className="exclusive-badge fade-in" ref={addToRefs}>Waitlist Only • Khet-to-Kitchen 2026</div>
+                    <div className="exclusive-badge fade-in" ref={addToRefs}>Launching Soon</div>
                     <h1 className="brand-name fade-in reveal-delay-1" ref={addToRefs}>Farm 2 Spoon</h1>
-                    <p className="tagline fade-in reveal-delay-2" ref={addToRefs}>Pure Dehydrated Fruit & Vegetable Powders.</p>
+                    <p className="tagline fade-in reveal-delay-2" ref={addToRefs}>Capture the Soul of Bharatiya Mitti.</p>
                     <p className="subtext fade-in reveal-delay-3" ref={addToRefs}>
-                        Experience the essence of Indian farming. Our premium dehydrated powders capture 100% natural 'Prana' from the soil, delivering farm-fresh nutrition directly to your spoon.
+                        We honor the ancient wisdom of Indian farming. Our powders aren't just food; they are 'Prana' from the soil, captured perfectly for your modern kitchen.
                     </p>
                     <div className="cta-wrapper fade-in reveal-delay-4" ref={addToRefs}>
                         <a href="#waitlist" className="cta-button primary">Secure Early Access</a>
@@ -249,8 +249,36 @@ function App() {
             <section className="about-brand">
                 <div className="container small-container text-center">
                     <p className="brand-story fade-in" ref={addToRefs}>
-                        At Farm 2 Spoon, we specialize in high-quality <strong>dehydrated fruit and vegetable powders</strong>. Using gentle preservation techniques, we transform farm-fresh produce into nutrient-dense superfoods — delivering purity, convenience, and wellness in every single spoon.
+                        At Farm 2 Spoon, we transform farm fresh produce into nutrient dense powders using gentle dehydration techniques. Delivering purity, convenience, and wellness in every spoon.
                     </p>
+                </div>
+            </section>
+
+            {/* Why Section */}
+            <section className="why">
+                <div className="container">
+                    <div className="section-header fade-in" ref={addToRefs}>
+                        <span className="section-label">Our Philosophy</span>
+                        <h2 className="section-title">Why Farm 2 Spoon</h2>
+                    </div>
+                    <div className="why-grid">
+                        <div className="why-card fade-in" ref={addToRefs}>
+                            <h4>Farm-fresh sourcing</h4>
+                            <p>We select only the highest quality produce at the peak of ripeness.</p>
+                        </div>
+                        <div className="why-card fade-in reveal-delay-1" ref={addToRefs}>
+                            <h4>Slow dehydration process</h4>
+                            <p>A meticulous low-temperature technique that respects cellular structure.</p>
+                        </div>
+                        <div className="why-card fade-in reveal-delay-2" ref={addToRefs}>
+                            <h4>No preservatives or additives</h4>
+                            <p>100% clean-label nutrition with nothing hidden.</p>
+                        </div>
+                        <div className="why-card fade-in reveal-delay-3" ref={addToRefs}>
+                            <h4>Sustainably sourced</h4>
+                            <p>Ethical partnerships with local farms for planet-friendly wellness.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -258,8 +286,8 @@ function App() {
             <section className="products-section">
                 <div className="container">
                     <div className="section-header fade-in" ref={addToRefs}>
-                        <span className="section-label">Our Natural Selection</span>
-                        <h2 className="section-title">Premium Dehydrated Powders</h2>
+                        <span className="section-label">Launch Collection</span>
+                        <h2 className="section-title">Our First Products</h2>
                     </div>
 
                     <div className="products-grid">
@@ -382,37 +410,6 @@ function App() {
                                 <p>Thank you for sharing your thoughts. We're crafting Farm 2 Spoon around your expectations.</p>
                             </div>
                         )}
-                    </div>
-                </div>
-            </section>
-
-            {/* Why Section */}
-            <section className="why">
-                <div className="container">
-                    <div className="section-header fade-in" ref={addToRefs}>
-                        <h2 className="section-title">Why Farm 2 Spoon</h2>
-                    </div>
-                    <div className="why-grid">
-                        <div className="why-card fade-in" ref={addToRefs}>
-                            <div className="why-icon">◈</div>
-                            <h4>Farm-fresh sourcing</h4>
-                            <p>We select only the highest quality produce at the peak of ripeness.</p>
-                        </div>
-                        <div className="why-card fade-in reveal-delay-1" ref={addToRefs}>
-                            <div className="why-icon">◈</div>
-                            <h4>Slow dehydration process</h4>
-                            <p>A meticulous low-temperature technique that respects cellular structure.</p>
-                        </div>
-                        <div className="why-card fade-in reveal-delay-2" ref={addToRefs}>
-                            <div className="why-icon">◈</div>
-                            <h4>No preservatives or additives</h4>
-                            <p>100% clean-label nutrition with nothing hidden.</p>
-                        </div>
-                        <div className="why-card fade-in reveal-delay-3" ref={addToRefs}>
-                            <div className="why-icon">◈</div>
-                            <h4>Sustainably sourced</h4>
-                            <p>Ethical partnerships with local farms for planet-friendly wellness.</p>
-                        </div>
                     </div>
                 </div>
             </section>
